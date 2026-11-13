@@ -3,6 +3,29 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar/navbar";
 
+
+
+
+import cors from "cors";
+import express from "express";
+
+const port = process.env.PORT || 3000;
+const app = express();
+
+app.use(cors());
+app.use
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
+
+app.listen(port, () => {
+  console.log(`Next.js server's running on http://localhost:${port}`);
+});
+
+
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
